@@ -3928,6 +3928,8 @@ with pkgs;
     beamPackages = beamPackages.extend (self: super: { elixir = elixir_1_14; });
   };
 
+  privatebin = callPackage ../servers/web-apps/privatebin { };
+
   pam-reattach = callPackage ../os-specific/darwin/pam-reattach { };
 
   reattach-to-user-namespace = callPackage ../os-specific/darwin/reattach-to-user-namespace { };
